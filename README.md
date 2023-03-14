@@ -1,36 +1,29 @@
-# <h1 align=center> **API_REC** </h1>
+# <h1 align=center> **API_ML** </h1>
 
 <p align="center">
 <img src="https://github.com/diegomaneyro/API_REC/blob/main/src/logo.png"  height=300>
 </p>
 
 
-API_REC es una API desarrollada con dos propositos la primera es poder realizar diferentes consultas sobre series y peliculas en plataformas de Streaming a 
-partir de archivos en formato .csv que se utilizan a modo de database, contienen informacion de plataformas de estreaming: Amazon prime, Netflix, Disney plus y 
-Hulu. 
+API_ML es una API desarrollada con dos propositos la primera es poder realizar diferentes consultas sobre series y peliculas en plataformas de Streaming a 
+partir de archivos en formato .csv que se utilizan a modo de database, contienen informacion de: Amazon prime, Netflix, Disney plus y Hulu. 
 
 En segunda instancia se utiliza esta api para alimentar un modelo de Machine Learning para realizar recomendaciones a usuarios en base a sus elecciones 
 previas. Luego de un proceso de ETL(extraer, transformar, cargar) en un jupyter Notebook y normalización de los datos con python, se desarrolo la pi con la 
-libreria FastApi. el Deployment se realiza desde Deta.Space.
+libreria FastApi. el Deployment se realiza desde [render](https://dashboard.render.com/)
 
 # <h1 align=center>**`Descripcion del proyecto`**</h1>
 
 
 ## Documentación
 
-**`transformaciones_datos`** : jupyter notebook del proceso ETL sobre los archivos alojados en la carpeta datos
+**`ETL_datos`** : jupyter notebook del proceso ETL sobre los archivos alojados en la carpeta datos
 
 
-**`transformaciones_ratings`** : jupyter notebook del proceso ETL sobre los archivos alojados en la carpeta ratings
+**`ETL_ratings`** : jupyter notebook del proceso ETL sobre los archivos alojados en la carpeta ratings
 
 
 **`main.py`** : archivo python de las API, donde se alojan las querys
-
-
-**`ratings`** [link](https://drive.google.com/file/d/1cucDq5gdXSD8Q69KN4cOsIbkotHVM3gA/view?usp=share_link) : Datos de los usuarios y sus preferencias sobre peliculas y series
-
-
-**`peliculas`** [link](https://drive.google.com/file/d/1wRHYGI-SGKNUrYTN8cNXyjdlkTMf1lSv/view?usp=sharing) : Archivos csv que se usaron de base de datos de las plataformas de streaming
 
 
 
@@ -58,7 +51,7 @@ libreria FastApi. el Deployment se realiza desde Deta.Space.
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `No requerido` | `string` | **API_REC: Test ok**. Conección realizada  |
+| `No requerido` | `string` | **API_ML: Test ok**. Conección realizada  |
 
 
 
@@ -125,15 +118,6 @@ libreria FastApi. el Deployment se realiza desde Deta.Space.
 
 ## Consultas de Ejemplo
 
-+ [Test](https://pi_1-1-s3688866.deta.app/docs#/default/test_Test_get)
-<p align="left">
-<img src="https://github.com/diegomaneyro/API_REC/blob/main/src/test.PNG" width="300" height="200">
-</p>
-
-+ [Menu](https://pi_1-1-s3688866.deta.app/docs#/default/menu_Menu_get)
-<p align="left">
-<img src="https://github.com/diegomaneyro/API_REC/blob/main/src/menu.PNG" width="300" height=200>
-</p>
 
 + [Get_max_duration](https://pi_1-1-s3688866.deta.app/docs#/default/get_max_duration_get_max_duration_get)
 
@@ -155,7 +139,7 @@ libreria FastApi. el Deployment se realiza desde Deta.Space.
 
 
 ## Deploy
-+ Deta.Space: [deploy](https://deta.space/discovery/@diegomaneyro/api_rec)
++ Deta.Space: [deploy]()
 
 
 

@@ -142,7 +142,7 @@ libreria FastApi. el Deployment se realiza desde [render](https://dashboard.rend
 
 
 ## Deploy
-+ Deta.Space: [deploy]()
++ Render: [deploy](https://api-ml-vk4n.onrender.com)
 
 
 

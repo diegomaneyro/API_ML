@@ -143,6 +143,9 @@ libreria FastApi. el Deployment se realiza desde [render](https://dashboard.rend
 
 ## Deploy
 + Render: [deploy](https://api-ml-vk4n.onrender.com)
+<p align="left">
+<img src="https://github.com/diegomaneyro/API_ML/blob/main/src/icon/Render-logo.bmp"  height=100>
+</p>
 
 
 

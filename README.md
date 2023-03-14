@@ -1,7 +1,7 @@
 # <h1 align=center> **API_ML** </h1>
 
 <p align="center">
-<img src="https://github.com/diegomaneyro/API_REC/blob/main/src/logo.png"  height=300>
+<img src="https://github.com/diegomaneyro/API_ML/blob/main/src/icon/logo.png"  height=300>
 </p>
 
 

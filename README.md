@@ -17,13 +17,16 @@ libreria FastApi. el Deployment se realiza desde [render](https://dashboard.rend
 
 ## Documentación
 
-**`ETL_datos`** : jupyter notebook del proceso ETL sobre los archivos alojados en la carpeta datos
+**`ETL_datos`** : jupyter notebook del proceso ETL sobre los archivos de streaming
 
 
-**`ETL_ratings`** : jupyter notebook del proceso ETL sobre los archivos alojados en la carpeta ratings
+**`ETL_ratings`** : jupyter notebook del proceso ETL sobre los archivos de ratings
 
 
-**`main.py`** : archivo python de las API, donde se alojan las querys
+**`EDA`** : Exploración de los archivos final luego del ETL, analisis y visualizacion las variables a utilizar por el modelo de predicción
+
+
+**`main.py`** : archivo python de la API, necesario para realizar las consultas 
 
 
 
@@ -119,7 +122,7 @@ libreria FastApi. el Deployment se realiza desde [render](https://dashboard.rend
 ## Consultas de Ejemplo
 
 
-+ [Get_max_duration](https://pi_1-1-s3688866.deta.app/docs#/default/get_max_duration_get_max_duration_get)
++ [Get_max_duration](https://pi_1-1-s3688866.deta.app/docs#/default/get_max_duration_get_max_duration_get/)
 
 *
 

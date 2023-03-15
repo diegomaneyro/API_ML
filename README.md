@@ -23,11 +23,14 @@ libreria FastApi. el Deployment se realiza desde [render](https://dashboard.rend
 **`ETL_ratings`** : jupyter notebook del proceso ETL sobre los archivos de ratings
 
 
-**`EDA`** : Exploración de los archivos final luego del ETL, analisis y visualizacion las variables a utilizar por el modelo de predicción
 
 
 **`main.py`** : archivo python de la API, necesario para realizar las consultas 
 
+## EDA
+
+
+**`EDA`** : Exploración de los archivos final luego del ETL, analisis y visualizacion las variables a utilizar por el modelo de predicción
 
 
 ## Consultas

@@ -1,7 +1,7 @@
 # <h1 align=center> **API_ML** </h1>
 
 <p align="center">
-<img src="https://github.com/diegomaneyro/API_ML/blob/main/src/icon/icon.png"  height=300>
+<img src="https://github.com/diegomaneyro/API_ML/blob/main/src/imagenes/icon.png"  height=300>
 </p>
 
 
@@ -147,7 +147,7 @@ libreria FastApi. el Deployment se realiza desde [render](https://dashboard.rend
 ## Deploy
 + Render: [deploy](https://api-ml-vk4n.onrender.com)
 <p align="left">
-<img src="https://github.com/diegomaneyro/API_ML/blob/main/src/icon/Render-logo.png"  height=180>
+<img src="https://github.com/diegomaneyro/API_ML/blob/main/src/imagenes/Render-logo.png"  height=180>
 </p>
 
 

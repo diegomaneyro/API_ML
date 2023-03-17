@@ -11,8 +11,8 @@ app = FastAPI(title='API-ML', description='Api de consulta para peliculas y seri
 # Conexión inicial
 @app.get("/")
 async def Inicio():
-    return {"API_ML":{"Test":"API_ML conexión realizada",
-                       }}
+    return {"Test":"API_ML conexión realizada",
+            }
 
 # Menu
 @app.get("/menu")
@@ -24,7 +24,7 @@ async def menu():
 # Película con mayor duración con filtros opcionales de AÑO, PLATAFORMA Y TIPO DE DURACIÓN    
 @app.get('/get_max_duration/{year}/{platform}/{duration_type}') 
 def get_max_duration(year: int = None, platform: str = None, duration_type: str = None):
-    df = pd.read_csv(r'src\csv_peliculas\peliculas_final.csv')
+    df = pd.read_csv('peliculas_final.csv')
     # Aplicar los filtros opcionales al DataFrame
     if year:
         df_filtered = df[df['release_year'] == year]
@@ -43,7 +43,7 @@ def get_max_duration(year: int = None, platform: str = None, duration_type: str 
 # Cantidad de películas por plataforma con un puntaje mayor a XX en determinado año
 @app.get("/get_score_count/{platform}/{scored}/{year}")
 def get_score_count(platform: str, scored: int, year: int):
-    df = pd.read_csv('src/csv_peliculas/peliculas_final.csv')
+    df = pd.read_csv('peliculas_final.csv')
     # Filtrar las películas por plataforma, puntaje y año
     df_filtered = df[(df['plataforma'] == platform) & (df['score'] > scored) & (df['release_year'] == year)]
     # Contar el número de películas en el DataFrame filtrado
@@ -54,7 +54,7 @@ def get_score_count(platform: str, scored: int, year: int):
 # Cantidad de películas por plataforma con filtro de plataforma
 @app.get("/get_count_plataforma/{platform}")
 def get_count_platform(platform: str):
-    df = pd.read_csv('src/csv_peliculas/peliculas_final.csv')
+    df = pd.read_csv('peliculas_final.csv')
     # Filtrar las películas por plataforma
     df_filtered = df[df['plataforma'] == platform]
     # Contar el número de películas en el DataFrame filtrado
@@ -66,7 +66,7 @@ def get_count_platform(platform: str):
 # Actor que más se repite según plataforma y año. (La función debe llamarse get_actor(platform, year))
 @app.get("/get_actor/{platform}/{year}")
 def get_actor(platform: str, year: int):
-    df = pd.read_csv('src/csv_peliculas/peliculas_final.csv')
+    df = pd.read_csv('peliculas_final.csv')
     # Filtrar las películas por plataforma y año
     df_filtered = df[(df['plataforma'] == platform) & (df['release_year'] == year)]
     # Contar la cantidad de veces que aparece cada actor en el DataFrame filtrado

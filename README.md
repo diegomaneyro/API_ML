@@ -124,26 +124,16 @@ libreria FastApi. el Deployment se realiza desde [render](https://dashboard.rend
 
 ## Consultas de Ejemplo
 
+* Las consultas deben ser en minusculas:
+* platform: netflix, amazon, hulu, disney
+* duration_type: min(minutos), season(temporadas)
+* year: 1920 hasta 2021
 
-+ [Get_max_duration](https://api-ml-vk4n.onrender.com/docs#/default/get_max_duration_get_max_duration_get)
-
-* [ejemplo](https://api-ml-vk4n.onrender.com/docs#/default/get_max_duration_get_max_duration_get)/get_max_duration_get_max_duration_get/2016/netflix/min
-* respuesta: 
-
-+ [Get_score_count](https://api-ml-vk4n.onrender.com/docs#/default/get_score_count_get_score_count__platform___scored___year__get)
-
-*
-
-+ [Get_count_plataforma](https://api-ml-vk4n.onrender.com/docs#/default/get_count_plataforma_get_count_plataforma__platform__get)
-
-*
-
-+ [Get_actor](https://api-ml-vk4n.onrender.com/docs#/default/get_actor_get_actor__platform___year__get) 
-
-*
-
-+ [DatosContacto](https://api-ml-vk4n.onrender.com/docs#/default/Datos_Contacto_Autor_get)
-
+#### [Get_max_duration](https://api-ml-vk4n.onrender.com/docs#/default/get_max_duration_get_max_duration_get)
+#### [Get_score_count](https://api-ml-vk4n.onrender.com/docs#/default/get_score_count_get_score_count__platform___scored___year__get)
+#### [Get_count_plataforma](https://api-ml-vk4n.onrender.com/docs#/default/get_count_plataforma_get_count_plataforma__platform__get)
+#### [Get_actor](https://api-ml-vk4n.onrender.com/docs#/default/get_actor_get_actor__platform___year__get) 
+#### [DatosContacto](https://api-ml-vk4n.onrender.com/docs#/default/Datos_Contacto_Autor_get)
 
 ## Deploy
 + Render: [deploy](https://api-ml-vk4n.onrender.com)

@@ -142,7 +142,7 @@ libreria FastApi. el Deployment se realiza desde [render](https://dashboard.rend
 
 *
 
-+ [DatosContacto](https://api-ml-vk4n.onrender.com/docs#/default/DatosContacto_Autor_get)
++ [DatosContacto](https://api-ml-vk4n.onrender.com/docs#/default/Datos_Contacto_Autor_get)
 
 
 ## Deploy

@@ -20,7 +20,7 @@ libreria FastApi. el Deployment se realiza desde [render](https://dashboard.rend
 **`ETL_datos`** : jupyter notebook del proceso ETL sobre los archivos de streaming [link](https://github.com/diegomaneyro/API_ML/blob/main/src/ETL/ETL_datos.ipynb)
 
 
-**`ETL_ratings`** : jupyter notebook del proceso ETL sobre los archivos de ratings 
+**`ETL_ratings`** : jupyter notebook del proceso ETL sobre los archivos de ratings [link](https://github.com/diegomaneyro/API_ML/blob/main/src/ETL/ETL_ratings.ipynb)
 
 
 

@@ -6,7 +6,7 @@ import pandas as pd
 
 # Inicializa en el objeto app la libreria
 app = FastAPI(title='API-ML', description='Api de consulta para peliculas y series en plataformas de streming. \n By Diego Maneyro', version='1.0.1')
-
+datos_csv = pd.read_csv(r'csv_peliculas\csv_peliculas\peliculas_final.csv')
 # Conexión inicial
 @app.get("/")
 async def Inicio():
@@ -23,8 +23,6 @@ async def menu():
 # Película con mayor duración con filtros opcionales de AÑO, PLATAFORMA Y TIPO DE DURACIÓN    
 @app.get('/get_max_duration') 
 def get_max_duration(year:int, platform:str, duration_type:str): 
-    datos_csv = pd.read_csv(r'csv_peliculas\csv_peliculas\peliculas_final.csv')
-    respuesta = ''
     res = datos_csv[(datos_csv['release_year']==year) & (datos_csv['duration_type']==duration_type) & (datos_csv['plataforma']==platform)]
     res = res.sort_values('duration_int', ascending=False)
     res = res.head(1)

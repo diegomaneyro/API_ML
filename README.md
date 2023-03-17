@@ -25,7 +25,7 @@ libreria FastApi. el Deployment se realiza desde [render](https://dashboard.rend
 
 
 
-**`main.py`** : archivo python de la API, necesario para realizar las consultas 
+**`main.py`** : archivo python de la API, necesario para realizar las consultas [link](https://github.com/diegomaneyro/API_ML/blob/main/main.py)
 
 ## EDA
 

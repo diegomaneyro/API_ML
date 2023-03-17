@@ -6,7 +6,7 @@ import pandas as pd
 
 # Inicializa en el objeto app la libreria
 app = FastAPI(title='API-ML', description='Api de consulta para peliculas y series en plataformas de streming. \n By Diego Maneyro', version='1.0.1')
-datos_csv = pd.read_csv(r'src\csv_peliculas\peliculas_final.csv')
+datos_csv = pd.read_csv(r'https://github.com/diegomaneyro/API_ML/blob/main/src/csv_peliculas/peliculas_final.csv')
 # Conexión inicial
 @app.get("/")
 async def Inicio():

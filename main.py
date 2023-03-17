@@ -1,12 +1,13 @@
 # Importar librerias necesarias
 from fastapi import FastAPI
 import csv
-from typing import Union
 import pandas as pd
+
+datos_csv = pd.read_csv(r'src\csv_peliculas\peliculas_final.csv')
 
 # Inicializa en el objeto app la libreria
 app = FastAPI(title='API-ML', description='Api de consulta para peliculas y series en plataformas de streming. \n By Diego Maneyro', version='1.0.1')
-datos_csv = pd.read_csv(r'https://github.com/diegomaneyro/API_ML/blob/main/src/csv_peliculas/peliculas_final.csv')
+
 # Conexión inicial
 @app.get("/")
 async def Inicio():
@@ -27,7 +28,7 @@ def get_max_duration(year:int, platform:str, duration_type:str):
     res = res.sort_values('duration_int', ascending=False)
     res = res.head(1)
     respuesta = res.title.to_list()  
-    return respuesta[0]
+    return {'pelicula': respuesta}
 
     
 

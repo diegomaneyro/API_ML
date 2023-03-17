@@ -125,23 +125,24 @@ libreria FastApi. el Deployment se realiza desde [render](https://dashboard.rend
 ## Consultas de Ejemplo
 
 
-+ [Get_max_duration](https://pi_1-1-s3688866.deta.app/docs#/default/get_max_duration_get_max_duration_get/)
++ [Get_max_duration](https://api-ml-vk4n.onrender.com/docs#/default/get_max_duration_get_max_duration_get)
+
+* [ejemplo](https://api-ml-vk4n.onrender.com/docs#/default/get_max_duration_get_max_duration_get)/get_max_duration_get_max_duration_get/2016/netflix/min
+* respuesta: 
+
++ [Get_score_count](https://api-ml-vk4n.onrender.com/docs#/default/get_score_count_get_score_count__platform___scored___year__get)
 
 *
 
-+ [Get_score_count](https://pi_1-1-s3688866.deta.app/docs#/default/get_score_count_get_score_count__platform___scored___year__get)
++ [Get_count_plataforma](https://api-ml-vk4n.onrender.com/docs#/default/get_count_plataforma_get_count_plataforma__platform__get)
 
 *
 
-+ [Get_count_plataforma](https://pi_1-1-s3688866.deta.app/docs#/default/get_count_plataforma_get_count_plataforma__platform__get)
++ [Get_actor](https://api-ml-vk4n.onrender.com/docs#/default/get_actor_get_actor__platform___year__get) 
 
 *
 
-+ [Get_actor](https://pi_1-1-s3688866.deta.app/docs#/default/get_actor_get_actor__platform___year__get) 
-
-*
-
-+ [DatosContacto](https://pi_1-1-s3688866.deta.app/docs#/default/DatosContacto_Autor_get)
++ [DatosContacto](https://api-ml-vk4n.onrender.com/docs#/default/DatosContacto_Autor_get)
 
 
 ## Deploy

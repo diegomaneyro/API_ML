@@ -3,7 +3,7 @@ from fastapi import FastAPI
 import csv
 import pandas as pd
 
-datos_csv = pd.read_csv(r'src\csv_peliculas\peliculas_final.csv')
+datos_csv = pd.read_csv(r'peliculas_final.csv')
 
 # Inicializa en el objeto app la libreria
 app = FastAPI(title='API-ML', description='Api de consulta para peliculas y series en plataformas de streming. \n By Diego Maneyro', version='1.0.1')

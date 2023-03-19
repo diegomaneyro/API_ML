@@ -30,7 +30,7 @@ libreria FastApi. el Deployment se realiza desde [render](https://dashboard.rend
 ## EDA
 
 
-+ **`EDA`** : Exploración de los archivos final luego del ETL, analisis y visualizacion las variables a utilizar por el modelo de predicción [link](https://github.com/diegomaneyro/API_ML/blob/main/src/EDA/EDA.ipynb)
++ **`EDA`** : Exploración de los archivos final luego del ETL, analisis y visualizacion las variables a utilizar por el modelo de predicción [link](https://github.com/diegomaneyro/API_ML/blob/main/src/EDA/eda_peliculas_colab.ipynb)
 
 
 ## Consultas

@@ -5,12 +5,10 @@
 </p>
 
 
-API_ML es una API desarrollada con dos propositos la primera es poder realizar diferentes consultas sobre series y peliculas en plataformas de Streaming a 
+API_ML es una API desarrollada con el propositos de poder realizar diferentes consultas sobre series y peliculas en plataformas de Streaming a 
 partir de archivos en formato .csv que se utilizan a modo de database, contienen informacion de: Amazon prime, Netflix, Disney plus y Hulu. 
 
-En segunda instancia se utiliza esta api para alimentar un modelo de Machine Learning para realizar recomendaciones a usuarios en base a sus elecciones 
-previas. Luego de un proceso de ETL(extraer, transformar, cargar) en un jupyter Notebook y normalización de los datos con python, se desarrolo la pi con la 
-libreria FastApi. el Deployment se realiza desde [render](https://dashboard.render.com/)
+En el siguiente link: [Modelo Recomendacion](https://github.com/diegomaneyro/modelo_recomendacion) esta alojado un modelo de Machine Learning para realizar recomendaciones a usuarios en base a sus elecciones previas. Luego de un proceso de ETL(extraer, transformar, cargar) en un jupyter Notebook y normalización de los datos con python, se desarrolo la pi con la libreria FastApi. el Deployment se realiza desde [render](https://dashboard.render.com/)
 
 # <h1 align=center>**`Descripcion del proyecto`**</h1>
 

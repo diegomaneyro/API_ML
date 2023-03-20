@@ -132,7 +132,7 @@ libreria FastApi. el Deployment se realiza desde [render](https://dashboard.rend
 #### [Get_max_duration](https://api-ml-vk4n.onrender.com/docs#/default/get_max_duration_get_max_duration_get)
 #### [Get_score_count](https://api-ml-vk4n.onrender.com/docs#/default/get_score_count_get_score_count__platform___scored___year__get)
 #### [Get_count_plataforma](https://api-ml-vk4n.onrender.com/docs#/default/get_count_plataforma_get_count_plataforma__platform__get)
-#### [Get_actor](https://api-ml-vk4n.onrender.com/docs#/default/get_actor_get_actor__platform___year__get) 
+#### [Get_actor](https://api-ml-vk4n.onrender.com/docs#/default/get_actor_actor__get) 
 #### [DatosContacto](https://api-ml-vk4n.onrender.com/docs#/default/Datos_Contacto_Autor_get)
 
 ## Deploy

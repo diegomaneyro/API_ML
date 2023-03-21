@@ -45,29 +45,17 @@ En el siguiente link: [Modelo Recomendacion](https://github.com/diegomaneyro/mod
 + **get_actor**: Actor que más se repite según plataforma y año. 
 
 
-## Default
 
-#### Test Conectividad
+#### Inicio
 
 ``http
-  GET /test
+  GET /inicio
 ``
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `No requerido` | `string` | **API_ML: Test ok**. Conección realizada  |
 
-
-
-#### Menu
-
-``http
-  GET /menu
-``
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `No requerido`      | `string` | **Menu opciones**|
 
 
 
@@ -94,7 +82,7 @@ En el siguiente link: [Modelo Recomendacion](https://github.com/diegomaneyro/mod
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `Plataforma` | `String` | **platform** |
-| `Puntuación` | `Integer` | **scored**  |
+| `Puntuación` | `string` | **scored**  |
 | `año` | `Integer` | **year**|
 
 
@@ -106,7 +94,7 @@ En el siguiente link: [Modelo Recomendacion](https://github.com/diegomaneyro/mod
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `Plataforma` | `Integer` | **platform** |
+| `Plataforma` | `string` | **platform** |
 
 
 #### get_actor
@@ -119,6 +107,7 @@ En el siguiente link: [Modelo Recomendacion](https://github.com/diegomaneyro/mod
 | :-------- | :------- | :------------------------- |
 | `Plataforma` | `string` | **platform** |
 | `año` | `Integer` | **year**  |
+
 
 ## Consultas de Ejemplo
 
@@ -143,11 +132,13 @@ En el siguiente link: [Modelo Recomendacion](https://github.com/diegomaneyro/mod
 
 **respuesta**  "platform": "n","count": 8807
 
-#### [Get_actor](https://api-ml-vk4n.onrender.com/docs#/default/get_actor_actor__get) 
-#### [DatosContacto](https://api-ml-vk4n.onrender.com/docs#/default/Datos_Contacto_Autor_get)
+#### [Get_actor](https://api-ml-vk4n.onrender.com/actor/?platform=disney&year=2020) 
+* /disney/2020
+
+**respuest**  "actor": "jonathan groff"
 
 ## Deploy
-+ Render: [deploy](https://api-ml-vk4n.onrender.com)
++ Render: [deploy](https://api-ml-vk4n.onrender.com/docs)
 <p align="left">
 <img src="https://github.com/diegomaneyro/API_ML/blob/main/src/imagenes/Render-logo.png"  height=180>
 </p>

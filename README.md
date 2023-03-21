@@ -132,7 +132,12 @@ En el siguiente link: [Modelo Recomendacion](https://github.com/diegomaneyro/mod
 **respuesta**:
 "title": "night sky with nature sounds with 432hz nature sound track for sleep","duration_int": 540
 
-#### [Get_score_count](https://api-ml-vk4n.onrender.com/docs#/default/get_score_count_get_score_count__platform___scored___year__get)
+#### [Get_score_count](https://api-ml-vk4n.onrender.com/score_count/?platform=netflix&scored=20&year=2020)
+* 2020/netflix/20
+**respuesta**:
+"scored": "20",
+  "año": 2020,
+  "cantidad de peliculas": 953
 #### [Get_count_plataforma](https://api-ml-vk4n.onrender.com/docs#/default/get_count_plataforma_get_count_plataforma__platform__get)
 #### [Get_actor](https://api-ml-vk4n.onrender.com/docs#/default/get_actor_actor__get) 
 #### [DatosContacto](https://api-ml-vk4n.onrender.com/docs#/default/Datos_Contacto_Autor_get)

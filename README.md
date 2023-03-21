@@ -140,6 +140,11 @@ En el siguiente link: [Modelo Recomendacion](https://github.com/diegomaneyro/mod
 </p>
 
 
+## Descargas
+ 
++ [peliculas.csv](https://vosjaatcfqxsgchnfgds.supabase.co/storage/v1/object/sign/peliculas/peliculas_final.csv?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwZWxpY3VsYXMvcGVsaWN1bGFzX2ZpbmFsLmNzdiIsImlhdCI6MTY3OTM5NTQyMSwiZXhwIjoxNjgxOTg3NDIxfQ.VeyW8FlS6XyaO5wlSFr4KNvBT80s3DKz617eqHBb_jU&t=2023-03-21T10%3A43%3A42.592Z)
+
++ [score.csv](https://github.com/diegomaneyro?tab=repositories)
 
 ## Autor
 

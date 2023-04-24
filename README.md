@@ -6,7 +6,7 @@
 
 ## Api
 
-API_ML es una API desarrollada con el propositos de poder realizar diferentes consultas sobre series y peliculas en plataformas de Streaming a 
+API_ML es una API desarrollada con el proposito de realizar diferentes consultas sobre series y peliculas en plataformas de Streaming a 
 partir de archivos en formato .csv que se utilizan a modo de database, contienen informacion de: Amazon prime, Netflix, Disney plus y Hulu. Luego de un proceso de ETL(extraer, transformar, cargar) en un jupyter Notebook y normalización de los datos con python, se desarrolo la pi con la libreria FastApi. el Deployment se realiza desde render [link](https://api-ml-vk4n.onrender.com/docs) 
 
 ## Modelo de recomendacion de Peliculas

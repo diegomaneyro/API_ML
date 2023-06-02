@@ -1,37 +1,48 @@
 # <h1 align=center> **API_ML** </h1>
 
 <p align="center">
-<img src="https://github.com/diegomaneyro/API_ML/blob/main/src/imagenes/icon.png"  height=300>
+<img src="recursos/icon.png"  height=300>
 </p>
 
-## Api
 
-API_ML es una API desarrollada con el proposito de realizar diferentes consultas sobre series y peliculas en plataformas de Streaming a 
-partir de archivos en formato .csv que se utilizan a modo de database, contienen informacion de: Amazon prime, Netflix, Disney plus y Hulu. Luego de un proceso de ETL(extraer, transformar, cargar) en un jupyter Notebook y normalización de los datos con python, se desarrolo la pi con la libreria FastApi. el Deployment se realiza desde render [link](https://api-ml-vk4n.onrender.com/docs) 
+# Autor
 
-## Modelo de recomendacion de Peliculas
++ diego-maneyro [linkedin](https://www.linkedin.com/in/diego-maneyro/)
 
-Modelo de Machine Learning para realizar recomendaciones a usuarios en base a sus elecciones previas. [link](https://github.com/diegomaneyro/modelo_recomendacion)
+
++ @diegomaneyro [github](https://www.github.com/octokatherine)
+
+
++ E-mail diegomaneyro@gmail.com
+
+
 
 # <h1 align=center>**`Descripcion del proyecto`**</h1>
 
 
-## Documentación
-
-**`ETL_peliculas`** : jupyter notebook del proceso ETL sobre los archivos de streaming [link](https://github.com/diegomaneyro/API_ML/blob/main/src/ETL/ETL_peliculas.ipynb)
-
-
-**`ETL_ratings`** : jupyter notebook del proceso ETL sobre los archivos de ratings [link](https://github.com/diegomaneyro/API_ML/blob/main/src/ETL/ETL_ratings.ipynb)
+API_ML es una API desarrollada con el proposito de realizar diferentes consultas sobre series y peliculas en plataformas de Streaming a 
+partir de archivos en formato .csv que se utilizan a modo de database, contienen informacion de: Amazon prime, Netflix, Disney plus y Hulu. Luego de un proceso de ETL(extraer, transformar, cargar) en un jupyter Notebook y normalización de los datos con python, se desarrolo la pi con la libreria FastApi. el Deployment se realiza desde 
+render [link](https://api-ml-vk4n.onrender.com/docs) 
 
 
 
+## Repositorio
 
-**`main.py`** : archivo python de la API, necesario para realizar las consultas [link](https://github.com/diegomaneyro/API_ML/blob/main/main.py)
+**`ETL`** : jupyter notebook del proceso ETL sobre los archivos de streaming.
 
-## EDA
+**`EDA`** : jupyter notebook del proceso exploratorio y graficas necesarias para comprender la calidad del dato. 
+
+**`Recursos`** : archivos multimedia de repositorio.
+
+**`Main`** : Archivo que inicializa la API de consultas
+
+**`Modelo`** : Archivos del modelo de recomendacion de peliculas.
 
 
-+ **`EDA`** : Exploración de los archivos final luego del ETL, analisis y visualizacion las variables a utilizar por el modelo de predicción [link](https://github.com/diegomaneyro/API_ML/blob/main/src/EDA/eda_peliculas_colab.ipynb)
+## Modelo de recomendacion de Peliculas
+
+Modelo de Machine Learning para realizar recomendaciones a usuarios en base a sus elecciones previas. 
+[Deploy]()
 
 
 ## Consultas
@@ -49,8 +60,6 @@ Modelo de Machine Learning para realizar recomendaciones a usuarios en base a su
 
 
 
-#### Inicio
-
 ``http
   GET /inicio
 ``
@@ -62,7 +71,6 @@ Modelo de Machine Learning para realizar recomendaciones a usuarios en base a su
 
 
 
-#### get_max_duration
 
 ``http
   GET /get_max_duration(year, platform, duration_type)
@@ -76,7 +84,6 @@ Modelo de Machine Learning para realizar recomendaciones a usuarios en base a su
 
 
 
-#### get_score_count(platform, scored, year)
 
 ``http
   GET /get_score_count
@@ -89,7 +96,6 @@ Modelo de Machine Learning para realizar recomendaciones a usuarios en base a su
 | `año` | `Integer` | **year**|
 
 
-#### get_count_platform
 
 ``http
   GET /get_count_platform(platform))
@@ -99,8 +105,6 @@ Modelo de Machine Learning para realizar recomendaciones a usuarios en base a su
 | :-------- | :------- | :------------------------- |
 | `Plataforma` | `string` | **platform** |
 
-
-#### get_actor
 
 ``http
   GET /get_actor(platform, year))
@@ -112,12 +116,12 @@ Modelo de Machine Learning para realizar recomendaciones a usuarios en base a su
 | `año` | `Integer` | **year**  |
 
 
-## Consultas de Ejemplo
-
 * Las consultas deben ser en minusculas:
 * platform: netflix, amazon, hulu, disney
 * duration_type: min(minutos), season(temporadas)
 * year: 1920 hasta 2021
+
+
 
 #### [Get_max_duration](https://api-ml-vk4n.onrender.com/max_duration/?year=2020&platform=amazon&duration_type=min)
 * /2020/amazon/min:
@@ -143,7 +147,7 @@ Modelo de Machine Learning para realizar recomendaciones a usuarios en base a su
 ## Deploy
 + Render: [deploy](https://api-ml-vk4n.onrender.com/docs)
 <p align="left">
-<img src="https://github.com/diegomaneyro/API_ML/blob/main/src/imagenes/Render-logo.png"  height=180>
+<img src="recursos/Render-logo.png"  height=180>
 </p>
 
 
@@ -153,13 +157,5 @@ Modelo de Machine Learning para realizar recomendaciones a usuarios en base a su
 
 + [score.csv](https://vosjaatcfqxsgchnfgds.supabase.co/storage/v1/object/sign/peliculas/ratings_final.zip?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwZWxpY3VsYXMvcmF0aW5nc19maW5hbC56aXAiLCJpYXQiOjE2NzkzOTcwMjMsImV4cCI6MTY4MTk4OTAyM30.t0IxFdanysxDLFtc4Q98nzQUIo5oFY1-yzT-q_jtPwg&t=2023-03-21T11%3A10%3A23.566Z)
 
-## Autor
 
-+ diego-maneyro [linkedin](https://www.linkedin.com/in/diego-maneyro/)
-
-
-+ @diegomaneyro [github](https://www.github.com/octokatherine)
-
-
-+ E-mail diegomaneyro@gmail.com
 

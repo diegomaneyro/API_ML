@@ -36,15 +36,6 @@ render [link](https://api-ml-vk4n.onrender.com/docs)
 
 **`Main`** : Archivo que inicializa la API de consultas
 
-**`Modelo`** : Archivos del modelo de recomendacion de peliculas.
-
-
-## Modelo de recomendacion de Peliculas
-
-Modelo de Machine Learning para realizar recomendaciones a usuarios en base a sus elecciones previas. 
-[Deploy]()
-
-
 ## Consultas
 
 + **get_max_duration**: Película con mayor duración con filtros opcionales de año, plataforma y tipo de duración.

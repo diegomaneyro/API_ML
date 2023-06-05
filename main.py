@@ -2,11 +2,7 @@ from fastapi import FastAPI, HTTPException
 import pandas as pd
 from pandasql import sqldf
 
-# ruta de datos de peliculas
-url = "datos/csvs/peliculas/peliculas_final.csv"
-# Inicializa en el objeto app la libreria
 app = FastAPI(title='API-ML', description='Api de consulta para peliculas y series en plataformas de streming. \n By Diego Maneyro', version='1.0.2')
-
 # Conexión inicial
 @app.get("/")
 async def Inicio():
@@ -15,7 +11,6 @@ async def Inicio():
 def verificar_conexion():
     try:
         # Cargar los datos del archivo CSV en un DataFrame de Pandas
-        #url = "https://drive.google.com/file/d/16cYwPRDnOyoKe8fzX2vSnaJFtmQMdTwq/view?usp=drive_link"
         url = "datos/csvs/peliculas/peliculas_final.csv"
         datos = pd.read_csv(url, sep=',', encoding='latin-1')
         return {"Message": "Conexion Exitosa"}
@@ -30,7 +25,6 @@ def get_max_duration(year: int = None, platform: str = None, duration_type: str 
     # Cargar los datos del archivo CSV en un DataFrame de Pandas
     url = "datos/csvs/peliculas/peliculas_final.csv"
     datos = pd.read_csv(url, sep=',', encoding='latin-1' 
-                        
     # Crear la consulta SQL base
     query = """
         SELECT *
@@ -41,7 +35,7 @@ def get_max_duration(year: int = None, platform: str = None, duration_type: str 
     if year is not None:
         query += f" AND release_year = {year}"
     if platform is not None:
-        # Convertir la plataforma a minúsculas
+        
         query = query = f"""
                 SELECT *
                 FROM datos
@@ -69,7 +63,8 @@ def get_max_duration(year: int = None, platform: str = None, duration_type: str 
     
     # Devolver la respuesta
     return respuesta
-
+                    
+    
 
 # Definir la ruta y la función correspondiente para obtener la cantidad de películas por plataforma con un puntaje mayor a XX en determinado año
 @app.get("/score_count/")

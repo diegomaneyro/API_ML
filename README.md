@@ -21,9 +21,7 @@
 
 
 API_ML es una API desarrollada con el proposito de realizar diferentes consultas sobre series y peliculas en plataformas de Streaming a 
-partir de archivos en formato .csv que se utilizan a modo de database, contienen informacion de: Amazon prime, Netflix, Disney plus y Hulu. Luego de un proceso de ETL(extraer, transformar, cargar) en un jupyter Notebook y normalización de los datos con python, se desarrolo la pi con la libreria FastApi. el Deployment se realiza desde 
-render [link](https://api-ml-vk4n.onrender.com/docs) 
-
+partir de archivos en formato .csv que se utilizan a modo de database, contienen informacion de: Amazon prime, Netflix, Disney plus y Hulu. Luego de un proceso de ETL(extraer, transformar, cargar) en un jupyter Notebook y normalización de los datos con python, se desarrolo la pi con la libreria FastApi.
 
 
 ## Repositorio
@@ -49,7 +47,19 @@ render [link](https://api-ml-vk4n.onrender.com/docs)
 
 + **get_actor**: Actor que más se repite según plataforma y año. 
 
+## Deploy
++ Render: [Demo](https://api-ml-vk4n.onrender.com/docs)
+<p align="left">
+<img src="recursos/Render-logo.png"  height=180>
+</p>
 
++ Gradio: [Model](https://api-ml-vk4n.onrender.com/docs)
+<p align="left">
+<img src="recursos/gradio.png"  height=180>
+</p>
+
+
+## Api Consultas
 
 ``http
   GET /inicio
@@ -134,13 +144,6 @@ render [link](https://api-ml-vk4n.onrender.com/docs)
 * /disney/2020
 
 **respuest**  "actor": "jonathan groff"
-
-## Deploy
-+ Render: [deploy](https://api-ml-vk4n.onrender.com/docs)
-<p align="left">
-<img src="recursos/Render-logo.png"  height=180>
-</p>
-
 
 ## Descargas
  

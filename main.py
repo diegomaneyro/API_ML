@@ -28,7 +28,9 @@ def verificar_conexion():
 @app.get("/max_duration")
 def get_max_duration(year: int = None, platform: str = None, duration_type: str = None):
     # Cargar los datos del archivo CSV en un DataFrame de Pandas
-    datos = pd.read_csv(url, sep=',', encoding='latin-1'    
+    url = "datos/csvs/peliculas/peliculas_final.csv"
+    datos = pd.read_csv(url, sep=',', encoding='latin-1' 
+                        
     # Crear la consulta SQL base
     query = """
         SELECT *

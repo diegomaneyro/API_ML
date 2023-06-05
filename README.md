@@ -15,13 +15,13 @@
 
 + E-mail diegomaneyro@gmail.com
 
+# Descripción de proyecto
 
+## API_ML es un proyecto desarrollado con dos propósitos principales:
 
-# <h1 align=center>**`Descripcion del proyecto`**</h1>
+1. API de consultas sobre series y películas en plataformas de streaming, utilizando archivos en formato .csv como base de datos. Estos archivos contienen información de servicios como Amazon Prime, Netflix, Disney Plus y Hulu. Mediante un proceso de ETL (extraer, transformar, cargar) realizado en un Jupyter Notebook y una normalización de datos en Python, se ha creado la API utilizando la biblioteca FastAPI.
 
-
-API_ML es una API desarrollada con el proposito de realizar diferentes consultas sobre series y peliculas en plataformas de Streaming a 
-partir de archivos en formato .csv que se utilizan a modo de database, contienen informacion de: Amazon prime, Netflix, Disney plus y Hulu. Luego de un proceso de ETL(extraer, transformar, cargar) en un jupyter Notebook y normalización de los datos con python, se desarrolo la pi con la libreria FastApi.
+2. Modelo de recomendación con Machine Learning que recibe el ID de usuarios de estas plataformas y sugiere series o películas en función de las elecciones previas. Además, se proporciona una interfaz gráfica desarrollada con Gradio, desplegada en HugginsFace, para probar la demostración del modelo de recomendación.
 
 
 ## Repositorio
@@ -33,6 +33,8 @@ partir de archivos en formato .csv que se utilizan a modo de database, contienen
 **`Recursos`** : archivos multimedia de repositorio.
 
 **`Main`** : Archivo que inicializa la API de consultas
+
+**`Modelo`** : Archivos del modelo de recomendación
 
 ## Consultas
 
@@ -120,36 +122,7 @@ partir de archivos en formato .csv que se utilizan a modo de database, contienen
 * Las consultas deben ser en minusculas:
 * platform: netflix, amazon, hulu, disney
 * duration_type: min(minutos), season(temporadas)
-* year: 1920 hasta 2021
-
-
-
-#### [Get_max_duration](https://api-ml-vk4n.onrender.com/max_duration/?year=2020&platform=amazon&duration_type=min)
-* /2020/amazon/min:
-
-**respuesta**  "title": "night sky with nature sounds with 432hz nature sound track for sleep","duration_int": 540
-
-#### [Get_score_count](https://api-ml-vk4n.onrender.com/score_count/?platform=netflix&scored=20&year=2020)
-* /2020/netflix/20
-
-**respuesta**  "scored": "20","año": 2020,
-  "cantidad de peliculas": 953
-  
-#### [Get_count_plataforma](https://api-ml-vk4n.onrender.com/count_platform/?platform=netflix)
-* /netflix
-
-**respuesta**  "platform": "n","count": 8807
-
-#### [Get_actor](https://api-ml-vk4n.onrender.com/actor/?platform=disney&year=2020) 
-* /disney/2020
-
-**respuest**  "actor": "jonathan groff"
-
-## Descargas
- 
-+ [peliculas.csv](https://vosjaatcfqxsgchnfgds.supabase.co/storage/v1/object/sign/peliculas/peliculas_final.csv?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwZWxpY3VsYXMvcGVsaWN1bGFzX2ZpbmFsLmNzdiIsImlhdCI6MTY3OTM5NTQyMSwiZXhwIjoxNjgxOTg3NDIxfQ.VeyW8FlS6XyaO5wlSFr4KNvBT80s3DKz617eqHBb_jU&t=2023-03-21T10%3A43%3A42.592Z)
-
-+ [score.csv](https://vosjaatcfqxsgchnfgds.supabase.co/storage/v1/object/sign/peliculas/ratings_final.zip?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwZWxpY3VsYXMvcmF0aW5nc19maW5hbC56aXAiLCJpYXQiOjE2NzkzOTcwMjMsImV4cCI6MTY4MTk4OTAyM30.t0IxFdanysxDLFtc4Q98nzQUIo5oFY1-yzT-q_jtPwg&t=2023-03-21T11%3A10%3A23.566Z)
+* year: 1920 hasta 2020
 
 
 

@@ -4,7 +4,6 @@ from pandasql import sqldf
 
 # ruta de datos de peliculas
 url = "datos/csvs/peliculas/peliculas_final.csv"
-datos = pd.read_csv(url, sep=',', encoding='latin-1')
 # Inicializa en el objeto app la libreria
 app = FastAPI(title='API-ML', description='Api de consulta para peliculas y series en plataformas de streming. \n By Diego Maneyro', version='1.0.2')
 
@@ -29,8 +28,7 @@ def verificar_conexion():
 @app.get("/max_duration")
 def get_max_duration(year: int = None, platform: str = None, duration_type: str = None):
     # Cargar los datos del archivo CSV en un DataFrame de Pandas
-    datos = pd.read_csv(url, sep=',', encoding='latin-1')
-        
+    datos = pd.read_csv(url, sep=',', encoding='latin-1'    
     # Crear la consulta SQL base
     query = """
         SELECT *

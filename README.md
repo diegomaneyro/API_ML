@@ -15,7 +15,6 @@
 
 + E-mail diegomaneyro@gmail.com
 
-# Descripción de proyecto
 
 ## API_ML es un proyecto desarrollado con dos propósitos principales:
 

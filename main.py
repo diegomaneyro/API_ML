@@ -26,11 +26,11 @@ def get_max_duration(year: int = None, platform: str = None, duration_type: str 
     url = "datos/csvs/peliculas/peliculas_final.csv"
     datos = pd.read_csv(url, sep=',', encoding='latin-1' 
     # Crear la consulta SQL base
-    query = """
-        SELECT *
-        FROM datos
-        WHERE 1 = 1
-    """    
+        query = """
+            SELECT *
+            FROM datos
+            WHERE 1 = 1
+        """    
     # Agregar condiciones opcionales según los parámetros proporcionados
     if year is not None:
         query += f" AND release_year = {year}"

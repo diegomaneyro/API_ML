@@ -2,7 +2,9 @@ from fastapi import FastAPI, HTTPException
 import pandas as pd
 from pandasql import sqldf
 
+# Inicializa en el objeto app la libreria
 app = FastAPI(title='API-ML', description='Api de consulta para peliculas y series en plataformas de streming. \n By Diego Maneyro', version='1.0.2')
+
 # Conexión inicial
 @app.get("/")
 async def Inicio():
@@ -23,14 +25,15 @@ def verificar_conexion():
 @app.get("/max_duration")
 def get_max_duration(year: int = None, platform: str = None, duration_type: str = None):
     # Cargar los datos del archivo CSV en un DataFrame de Pandas
-    url = "datos/csvs/peliculas/peliculas_final.csv"
-    datos = pd.read_csv(url, sep=',', encoding='latin-1' 
+    url = "datos/csvs/peliculas/peliculas_final.csv"     
+    datos = pd.read_csv(url, sep=',', encoding='latin-1')
+        
     # Crear la consulta SQL base
-        query = """
-            SELECT *
-            FROM datos
-            WHERE 1 = 1
-        """    
+    query = """
+        SELECT *
+        FROM datos
+        WHERE 1 = 1
+    """    
     # Agregar condiciones opcionales según los parámetros proporcionados
     if year is not None:
         query += f" AND release_year = {year}"
@@ -62,9 +65,7 @@ def get_max_duration(year: int = None, platform: str = None, duration_type: str 
     respuesta = {'title': titulo}
     
     # Devolver la respuesta
-    return respuesta
-                    
-    
+    return respuesta    
 
 # Definir la ruta y la función correspondiente para obtener la cantidad de películas por plataforma con un puntaje mayor a XX en determinado año
 @app.get("/score_count/")

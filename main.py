@@ -42,7 +42,7 @@ def get_max_duration(year: int = None, platform: str = None, duration_type: str 
         query += f" AND release_year = {year}"
     if platform is not None:
         # Convertir la plataforma a minúsculas
-        query = f"""
+        query = query = f"""
                 SELECT *
                 FROM datos
                 WHERE LOWER(SUBSTR(id, 1, 1)) = '{platform[0]}'

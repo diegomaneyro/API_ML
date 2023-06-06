@@ -1,4 +1,4 @@
-# <h1 align=center> **API_ML** </h1>
+# <h1 align=center> **ApiStream** </h1>
 
 <p align="center">
 <img src="recursos/icon.png"  height=300>
@@ -16,14 +16,11 @@
 + E-mail diegomaneyro@gmail.com
 
 
+## ApiStream es un proyecto desarrollado con dos propósitos principales:
 
-# <h1 align=center>**`Descripcion del proyecto`**</h1>
+1. API de consultas sobre series y películas en plataformas de streaming, utilizando archivos en formato .csv como base de datos. Estos archivos contienen información de servicios como Amazon Prime, Netflix, Disney Plus y Hulu. Mediante un proceso de ETL (extraer, transformar, cargar) realizado en un Jupyter Notebook y una normalización de datos en Python, se ha creado la API utilizando la biblioteca FastAPI.
 
-
-API_ML es una API desarrollada con el proposito de realizar diferentes consultas sobre series y peliculas en plataformas de Streaming a 
-partir de archivos en formato .csv que se utilizan a modo de database, contienen informacion de: Amazon prime, Netflix, Disney plus y Hulu. Luego de un proceso de ETL(extraer, transformar, cargar) en un jupyter Notebook y normalización de los datos con python, se desarrolo la pi con la libreria FastApi. el Deployment se realiza desde 
-render [link](https://api-ml-vk4n.onrender.com/docs) 
-
+2. Modelo de recomendación con Machine Learning que recibe el ID de usuarios de estas plataformas y sugiere series o películas en función de las elecciones previas. Además, se proporciona una interfaz gráfica desarrollada con Gradio, desplegada en HugginsFace, para probar la demostración del modelo de recomendación.
 
 
 ## Repositorio
@@ -36,32 +33,68 @@ render [link](https://api-ml-vk4n.onrender.com/docs)
 
 **`Main`** : Archivo que inicializa la API de consultas
 
+**`Modelo`** : Archivos del modelo de recomendación
+
+## Deploy
++ Render: [Demo](https://api-ml-vk4n.onrender.com/docs)
+<p align="left">
+<img src="recursos/Render-logo.png"  height=180>
+</p>
+
++ Gradio: [Model](https://api-ml-vk4n.onrender.com/docs)
+<p align="left">
+<img src="recursos/gradio.png"  height=180>
+</p>
+
+## Ingreso de datos
+
+* Las consultas deben ser en minusculas:
+
+* platform(str): netflix, amazon, hulu, disney
+
+* duration_type(str): min(minutos), season(temporadas)
+
+* year(int): 1920 hasta 2020
+
 ## Consultas
 
-+ **get_max_duration**: Película con mayor duración con filtros opcionales de año, plataforma y tipo de duración.
++ **Inicio**: Pagina de inicio. [inicio de api](https://api-ml-vk4n.onrender.com)
+
++ **Menu**: Pagina de donde se visualizan las distintas consultas que ofrece la api. [menu opciones](https://api-ml-vk4n.onrender.com/docs)
+
++ **autor**: Datos del desarrollador resposnsable del proyecto. [datos del autor](https://api-ml-vk4n.onrender.com/docs#/default/autor_autor_get)
+
++ **verificar conexion**: Ejecute este paso para asegurarse que la api esta accediendo a los datos. [conexion](https://api-ml-vk4n.onrender.com/docs#/default/verificar_conexion_verificar_conexion_get)
+
++ **get_max_duration**: Película con mayor duración con filtros opcionales de año, plataforma y tipo de duración. [pelicula mayor duración](https://api-ml-vk4n.onrender.com/docs#/default/get_max_duration_max_duration_get)
+
++ **get_score_count**: Cantidad de películas por plataforma con un puntaje mayor a XX en determinado año. [peliculas por puntaje](https://api-ml-vk4n.onrender.com/docs#/default/get_score_count_score_count__get)
 
 
-+ **get_score_count**: Cantidad de películas por plataforma con un puntaje mayor a XX en determinado año.
++ **get_count_platform**: Cantidad de películas por plataforma con filtro de plataforma. [peliculas por plataforma](https://api-ml-vk4n.onrender.com/docs#/default/get_count_platform_count_platform__get)
 
 
-+ **get_count_platform**: Cantidad de películas por plataforma con filtro de plataforma.
++ **get_actor**: Actor que más se repite según plataforma y año. [actor mas frecuente](https://api-ml-vk4n.onrender.com/docs#/default/get_actor_actor__get)
 
-
-+ **get_actor**: Actor que más se repite según plataforma y año. 
-
-
+## Api
 
 ``http
-  GET /inicio
+  GET / Autor
 ``
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `No requerido` | `string` | **API_ML: Test ok**. Conección realizada  |
+| `No requerido` | `string` | `Datos Desarrollador` |
 
+``http
+  GET / verificar Conexion
+``
 
-
-
+| Condition | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| **ok** | `string` |  **Conexion Exitosa** |
+| **failure** | `string` |  **No se encontró el archivo de datos** |
+| **error** | `string` |  **Error en la conexion a los datos** |
 
 ``http
   GET /get_max_duration(year, platform, duration_type)
@@ -72,9 +105,6 @@ render [link](https://api-ml-vk4n.onrender.com/docs)
 | `Filtro Opcional` | `Integer` | **year** |
 | `Filtro Opcional` | `string` | **platform**  |
 | `Filtro Opcional` | `string` | **duration_type** |
-
-
-
 
 ``http
   GET /get_score_count
@@ -105,48 +135,5 @@ render [link](https://api-ml-vk4n.onrender.com/docs)
 | :-------- | :------- | :------------------------- |
 | `Plataforma` | `string` | **platform** |
 | `año` | `Integer` | **year**  |
-
-
-* Las consultas deben ser en minusculas:
-* platform: netflix, amazon, hulu, disney
-* duration_type: min(minutos), season(temporadas)
-* year: 1920 hasta 2021
-
-
-
-#### [Get_max_duration](https://api-ml-vk4n.onrender.com/max_duration/?year=2020&platform=amazon&duration_type=min)
-* /2020/amazon/min:
-
-**respuesta**  "title": "night sky with nature sounds with 432hz nature sound track for sleep","duration_int": 540
-
-#### [Get_score_count](https://api-ml-vk4n.onrender.com/score_count/?platform=netflix&scored=20&year=2020)
-* /2020/netflix/20
-
-**respuesta**  "scored": "20","año": 2020,
-  "cantidad de peliculas": 953
-  
-#### [Get_count_plataforma](https://api-ml-vk4n.onrender.com/count_platform/?platform=netflix)
-* /netflix
-
-**respuesta**  "platform": "n","count": 8807
-
-#### [Get_actor](https://api-ml-vk4n.onrender.com/actor/?platform=disney&year=2020) 
-* /disney/2020
-
-**respuest**  "actor": "jonathan groff"
-
-## Deploy
-+ Render: [deploy](https://api-ml-vk4n.onrender.com/docs)
-<p align="left">
-<img src="recursos/Render-logo.png"  height=180>
-</p>
-
-
-## Descargas
- 
-+ [peliculas.csv](https://vosjaatcfqxsgchnfgds.supabase.co/storage/v1/object/sign/peliculas/peliculas_final.csv?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwZWxpY3VsYXMvcGVsaWN1bGFzX2ZpbmFsLmNzdiIsImlhdCI6MTY3OTM5NTQyMSwiZXhwIjoxNjgxOTg3NDIxfQ.VeyW8FlS6XyaO5wlSFr4KNvBT80s3DKz617eqHBb_jU&t=2023-03-21T10%3A43%3A42.592Z)
-
-+ [score.csv](https://vosjaatcfqxsgchnfgds.supabase.co/storage/v1/object/sign/peliculas/ratings_final.zip?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJwZWxpY3VsYXMvcmF0aW5nc19maW5hbC56aXAiLCJpYXQiOjE2NzkzOTcwMjMsImV4cCI6MTY4MTk4OTAyM30.t0IxFdanysxDLFtc4Q98nzQUIo5oFY1-yzT-q_jtPwg&t=2023-03-21T11%3A10%3A23.566Z)
-
 
 

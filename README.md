@@ -92,9 +92,9 @@
 
 | Condition | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `if ok` | `string` |  `Message`: `Conexion Exitosa` |
-| `failure` | `string` |  `Message`:`No se encontró el archivo de datos` |
-| `error` | `string` |  `Message`: `Error en la conexion a los datos` |
+| **ok** | `string` |  **Conexion Exitosa** |
+| **failure** | `string` |  **No se encontró el archivo de datos** |
+| **error** | `string` |  **Error en la conexion a los datos** |
 
 ``http
   GET /get_max_duration(year, platform, duration_type)

@@ -1,4 +1,4 @@
-# <h1 align=center> **API_ML** </h1>
+# <h1 align=center> **ApiStream** </h1>
 
 <p align="center">
 <img src="recursos/icon.png"  height=300>
@@ -16,7 +16,7 @@
 + E-mail diegomaneyro@gmail.com
 
 
-## API_ML es un proyecto desarrollado con dos propósitos principales:
+## ApiStream es un proyecto desarrollado con dos propósitos principales:
 
 1. API de consultas sobre series y películas en plataformas de streaming, utilizando archivos en formato .csv como base de datos. Estos archivos contienen información de servicios como Amazon Prime, Netflix, Disney Plus y Hulu. Mediante un proceso de ETL (extraer, transformar, cargar) realizado en un Jupyter Notebook y una normalización de datos en Python, se ha creado la API utilizando la biblioteca FastAPI.
 
@@ -35,6 +35,18 @@
 
 **`Modelo`** : Archivos del modelo de recomendación
 
+## Deploy
++ Render: [Demo](https://api-ml-vk4n.onrender.com/docs)
+<p align="left">
+<img src="recursos/Render-logo.png"  height=180>
+</p>
+
++ Gradio: [Model](https://api-ml-vk4n.onrender.com/docs)
+<p align="left">
+<img src="recursos/gradio.png"  height=180>
+</p>
+
+
 ## Consultas
 
 + **get_max_duration**: Película con mayor duración con filtros opcionales de año, plataforma y tipo de duración.
@@ -48,31 +60,36 @@
 
 + **get_actor**: Actor que más se repite según plataforma y año. 
 
-## Deploy
-+ Render: [Demo](https://api-ml-vk4n.onrender.com/docs)
-<p align="left">
-<img src="recursos/Render-logo.png"  height=180>
-</p>
 
-+ Gradio: [Model](https://api-ml-vk4n.onrender.com/docs)
-<p align="left">
-<img src="recursos/gradio.png"  height=180>
-</p>
+## Ingreso de datos
 
+* Las consultas deben ser en minusculas:
 
-## Api Consultas
+* platform(str): netflix, amazon, hulu, disney
+
+* duration_type(str): min(minutos), season(temporadas)
+
+* year(int): 1920 hasta 2020
+
+## Api
 
 ``http
-  GET /inicio
+  GET / Autor
 ``
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `No requerido` | `string` | **API_ML: Test ok**. Conección realizada  |
+| `No requerido` | `string` | `Datos Desarrollador` |
 
+``http
+  GET / verificar Conexion
+``
 
-
-
+| Condition | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `if ok` | `string` |  `Message`: `Conexion Exitosa` |
+| `failure` | `string` |  `Message`:`No se encontró el archivo de datos` |
+| `error` | `string` |  `Message`: `Error en la conexion a los datos` |
 
 ``http
   GET /get_max_duration(year, platform, duration_type)
@@ -83,9 +100,6 @@
 | `Filtro Opcional` | `Integer` | **year** |
 | `Filtro Opcional` | `string` | **platform**  |
 | `Filtro Opcional` | `string` | **duration_type** |
-
-
-
 
 ``http
   GET /get_score_count
@@ -116,12 +130,5 @@
 | :-------- | :------- | :------------------------- |
 | `Plataforma` | `string` | **platform** |
 | `año` | `Integer` | **year**  |
-
-
-* Las consultas deben ser en minusculas:
-* platform: netflix, amazon, hulu, disney
-* duration_type: min(minutos), season(temporadas)
-* year: 1920 hasta 2020
-
 
 

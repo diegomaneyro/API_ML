@@ -2,9 +2,6 @@ from fastapi import FastAPI, HTTPException
 import pandas as pd
 from pandasql import sqldf
 
-# ruta de datos de peliculas
-url = "datos/csvs/peliculas/peliculas_final.csv"
-datos = pd.read_csv(url, sep=',', encoding='latin-1')
 # Inicializa en el objeto app la libreria
 app = FastAPI(title='API-ML', description='Api de consulta para peliculas y series en plataformas de streming. \n By Diego Maneyro', version='1.0.2')
 
@@ -16,7 +13,6 @@ async def Inicio():
 def verificar_conexion():
     try:
         # Cargar los datos del archivo CSV en un DataFrame de Pandas
-        #url = "https://drive.google.com/file/d/16cYwPRDnOyoKe8fzX2vSnaJFtmQMdTwq/view?usp=drive_link"
         url = "datos/csvs/peliculas/peliculas_final.csv"
         datos = pd.read_csv(url, sep=',', encoding='latin-1')
         return {"Message": "Conexion Exitosa"}
@@ -29,6 +25,7 @@ def verificar_conexion():
 @app.get("/max_duration")
 def get_max_duration(year: int = None, platform: str = None, duration_type: str = None):
     # Cargar los datos del archivo CSV en un DataFrame de Pandas
+    url = "datos/csvs/peliculas/peliculas_final.csv"     
     datos = pd.read_csv(url, sep=',', encoding='latin-1')
         
     # Crear la consulta SQL base
@@ -41,7 +38,7 @@ def get_max_duration(year: int = None, platform: str = None, duration_type: str 
     if year is not None:
         query += f" AND release_year = {year}"
     if platform is not None:
-        # Convertir la plataforma a minúsculas
+        
         query = query = f"""
                 SELECT *
                 FROM datos
@@ -71,9 +68,11 @@ def get_max_duration(year: int = None, platform: str = None, duration_type: str 
     return respuesta
 
 
+
 # Definir la ruta y la función correspondiente para obtener la cantidad de películas por plataforma con un puntaje mayor a XX en determinado año
 @app.get("/score_count/")
 def get_score_count(platform: str, scored: str, year: int):
+    url = "datos/csvs/peliculas/peliculas_final.csv"     
     datos = pd.read_csv(url)
     if platform=='netflix':
         platform='n'
@@ -98,6 +97,8 @@ def get_score_count(platform: str, scored: str, year: int):
 # Definir la ruta y la función correspondiente para obtener la cantidad de películas por plataforma
 @app.get("/count_platform/")
 def get_count_platform(platform: str):
+    url = "datos/csvs/peliculas/peliculas_final.csv"
+    datos = pd.read_csv(url, sep=',', encoding='latin-1')     
     if platform=='netflix':
         platform='n'
     if platform=='amazon':

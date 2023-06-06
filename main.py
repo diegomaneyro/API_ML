@@ -3,12 +3,17 @@ import pandas as pd
 from pandasql import sqldf
 
 # Inicializa en el objeto app la libreria
-app = FastAPI(title='API-ML', description='Api de consulta para peliculas y series en plataformas de streming. \n By Diego Maneyro', version='1.0.2')
+app = FastAPI(title='ApiStream', description='Api de consulta para peliculas y series en plataformas de streming. \n By Diego Maneyro', version='1.0.3')
 
 # Conexión inicial
 @app.get("/")
 async def Inicio():
     return {"Inicio":"Api_ml"}
+@app.get("/autor")
+async def autor():
+    datos = {"Nombre y Apellido":"Diego Maneyro",
+            "Email":"diegomaneyro@gmail.com"}
+    return datos
 @app.get("/verificar_conexion")
 def verificar_conexion():
     try:

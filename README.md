@@ -46,21 +46,6 @@
 <img src="recursos/gradio.png"  height=180>
 </p>
 
-
-## Consultas
-
-+ **get_max_duration**: Película con mayor duración con filtros opcionales de año, plataforma y tipo de duración.
-
-
-+ **get_score_count**: Cantidad de películas por plataforma con un puntaje mayor a XX en determinado año.
-
-
-+ **get_count_platform**: Cantidad de películas por plataforma con filtro de plataforma.
-
-
-+ **get_actor**: Actor que más se repite según plataforma y año. 
-
-
 ## Ingreso de datos
 
 * Las consultas deben ser en minusculas:
@@ -70,6 +55,26 @@
 * duration_type(str): min(minutos), season(temporadas)
 
 * year(int): 1920 hasta 2020
+
+## Consultas
+
++ **Inicio**: Pagina de inicio. [inicio de api](https://api-ml-vk4n.onrender.com)
+
++ **Menu**: Pagina de donde se visualizan las distintas consultas que ofrece la api. [menu opciones](https://api-ml-vk4n.onrender.com/docs)
+
++ **autor**: Datos del desarrollador resposnsable del proyecto. [datos del autor](https://api-ml-vk4n.onrender.com/docs#/default/autor_autor_get)
+
++ **verificar conexion**: Ejecute este paso para asegurarse que la api esta accediendo a los datos. [conexion](https://api-ml-vk4n.onrender.com/docs#/default/verificar_conexion_verificar_conexion_get)
+
++ **get_max_duration**: Película con mayor duración con filtros opcionales de año, plataforma y tipo de duración. [pelicula mayor duración](https://api-ml-vk4n.onrender.com/docs#/default/get_max_duration_max_duration_get)
+
++ **get_score_count**: Cantidad de películas por plataforma con un puntaje mayor a XX en determinado año. [peliculas por puntaje](https://api-ml-vk4n.onrender.com/docs#/default/get_score_count_score_count__get)
+
+
++ **get_count_platform**: Cantidad de películas por plataforma con filtro de plataforma. [peliculas por plataforma](https://api-ml-vk4n.onrender.com/docs#/default/get_count_platform_count_platform__get)
+
+
++ **get_actor**: Actor que más se repite según plataforma y año. [actor mas frecuente](https://api-ml-vk4n.onrender.com/docs#/default/get_actor_actor__get)
 
 ## Api
 

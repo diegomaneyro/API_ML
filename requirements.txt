@@ -3,3 +3,6 @@ numpy
 pandas
 uvicorn
 pandasql
+scikit-learn
+scikit-surprise
+gradio

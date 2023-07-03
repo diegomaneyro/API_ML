@@ -37,7 +37,7 @@
 <img src="recursos/Render-logo.png"  height=180>
 </p>
 
-+ Gradio: [Model](https://huggingface.co/spaces/diegomaneyro/ApiStream)
++ Gradio: [huggingface](https://huggingface.co/spaces/diegomaneyro/ApiStream)
 <p align="left">
 <img src="recursos/gradio.png"  height=180>
 </p>

@@ -135,6 +135,6 @@
 
 ## Licencia
 
-Este proyecto se distribuye bajo la Licencia MIT. Puedes encontrar los términos y condiciones de la licencia en [este enlace](https://github.com/diegomaneyro/ApiStream/blob/main/LICENSE).
+Este proyecto se distribuye bajo la Licencia MIT. Puedes encontrar los términos y condiciones de la licencia en [este enlace](https://github.com/diegomaneyro/ApiStream/blob/main/License).
 
 

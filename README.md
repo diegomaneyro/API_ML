@@ -9,10 +9,6 @@
 
 + diego-maneyro [linkedin](https://www.linkedin.com/in/diego-maneyro/)
 
-
-+ @diegomaneyro [github](https://www.github.com/octokatherine)
-
-
 + E-mail diegomaneyro@gmail.com
 
 
@@ -41,7 +37,7 @@
 <img src="recursos/Render-logo.png"  height=180>
 </p>
 
-+ Gradio: [Model](https://api-ml-vk4n.onrender.com/docs)
++ Gradio: [Model](https://huggingface.co/spaces/diegomaneyro/ApiStream)
 <p align="left">
 <img src="recursos/gradio.png"  height=180>
 </p>

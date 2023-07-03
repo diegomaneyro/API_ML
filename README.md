@@ -37,11 +37,6 @@
 <img src="recursos/Render-logo.png"  height=180>
 </p>
 
-+ Hugginsface: [Modelo](https://huggingface.co/spaces/diegomaneyro/ApiStream)
-<p align="left">
-<img src="recursos/gradio.png"  height=180>
-</p>
-
 ## Ingreso de datos
 
 * Las consultas deben ser en minusculas:
@@ -132,6 +127,14 @@
 | `Plataforma` | `string` | **platform** |
 | `año` | `Integer` | **year**  |
 
+## Deploy
+* Hugginsface: [Modelo](https://huggingface.co/spaces/diegomaneyro/ApiStream)
+  
+Se ingresa el IdUsuario y en la salida de datos veremos los titulos de la recomendación
+
+<p align="left">
+<img src="recursos/gradio.png"  height=180>
+</p>
 
 ## Licencia
 

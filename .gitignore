@@ -1,3 +1,4 @@
 datos/csvs/ratings/
-venv/
+env/
 __pycache__/
+pruebas/

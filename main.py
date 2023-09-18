@@ -118,13 +118,23 @@ def get_count_platform(platform: str):
     
     # Obtener la cantidad de películas
     count = len(count_platform)
-    
+    if platform=='n':
+        platform='netflix'
+    if platform=='a':
+        platform='amazon'
+    if platform=='h':
+        platform='hulu'
+    if platform=='d':
+        platform='disney'
     # Retornar la cantidad de películas
-    return {"platform": platform, "count": count}
+    return {"plataforma de streaming": platform, "cantidad de peliculas": count}
 
 # Definir la ruta y la función correspondiente para obtener el actor que más se repite según plataforma y año
 @app.get("/actor/")
-def get_actor(platform: str, year: int):
+def get_actor(platform: str, year: int):       
+    url = "datos/csvs/peliculas/peliculas_final.csv"
+    datos = pd.read_csv(url, sep=',', encoding='latin-1')  
+
     if platform=='netflix':
         platform='n'
     if platform=='amazon':
@@ -133,10 +143,17 @@ def get_actor(platform: str, year: int):
         platform='h'
     if platform=='disney':
         platform='d'
-    
-    # Contar los actores que más se repiten
+    # Filtrar las filas donde 'cast' no es igual a 'sindato'
+    datos = datos[datos['cast'] != 'SinDato']
+    datos = datos[datos['id'].str[0].str.lower() == platform]
+
+     # Contar los actores que más se repiten
     actor_count = datos['cast'].str.split(', ', expand=True).stack().value_counts()
 
+    # Verificar si actor_count está vacío o nulo
+    if actor_count.empty or actor_count.isna().all():
+        return {'actor': 'Dato no disponible'}
+        
     # Obtener el actor con el mayor recuento
     top_actor = actor_count.index[0]
 

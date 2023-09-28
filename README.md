@@ -37,11 +37,15 @@ ApiStream es un proyecto desarrollado con dos propósitos principales:
 </p>
  Usando Docker realize una imgen de la aplicacion para luego alojarla en Microsoft Azure, por medio de un registro de contenedores que luego se utiliza desde el Web Services. los datos se leen desde un contenedor en una cuenta de almacenamiento en Microsoft Azure Storage para alimentar a la api. 
 
+
+## Flujo del Dato
+<p align="left">
+<img src="recursos/flujoDato.png"  height=450>
+</p>
+
+
 ## Deploy Api
 + WebAppApiStream: [Demo](webappapistream.azurewebsites.net)
-<p align="left">
-<img src="recursos/nube.png"  height=180>
-</p>
 
 
 ## Ingreso de datos
@@ -56,23 +60,23 @@ ApiStream es un proyecto desarrollado con dos propósitos principales:
 
 ## Consultas
 
-+ **Inicio**: Pagina de inicio. [inicio de api](https://api-ml-vk4n.onrender.com)
++ **Inicio**: Pagina de inicio. [inicio de api](https://webappapistream.azurewebsites.net/)
 
-+ **Menu**: Pagina de donde se visualizan las distintas consultas que ofrece la api. [menu opciones](https://api-ml-vk4n.onrender.com/docs)
++ **Menu**: Pagina de donde se visualizan las distintas consultas que ofrece la api. [menu opciones](https://webappapistream.azurewebsites.net/docs)
 
-+ **autor**: Datos del desarrollador resposnsable del proyecto. [datos del autor](https://api-ml-vk4n.onrender.com/docs#/default/autor_autor_get)
++ **autor**: Datos del desarrollador resposnsable del proyecto. [datos del autor](https://webappapistream.azurewebsites.net/docs#/default/autor_autor_get)
 
-+ **verificar conexion**: Ejecute este paso para asegurarse que la api esta accediendo a los datos. [conexion](https://api-ml-vk4n.onrender.com/docs#/default/verificar_conexion_verificar_conexion_get)
++ **verificar conexion**: Ejecute este paso para asegurarse que la api esta accediendo a los datos. [conexion](https://webappapistream.azurewebsites.net/docs#/default/verificar_conexion_verificar_conexion_get)
 
-+ **get_max_duration**: Película con mayor duración con filtros opcionales de año, plataforma y tipo de duración. [pelicula mayor duración](https://api-ml-vk4n.onrender.com/docs#/default/get_max_duration_max_duration_get)
++ **get_max_duration**: Película con mayor duración con filtros opcionales de año, plataforma y tipo de duración. [pelicula mayor duración](https://webappapistream.azurewebsites.net/docs#/default/get_max_duration_max_duration_get)
 
-+ **get_score_count**: Cantidad de películas por plataforma con un puntaje mayor a XX en determinado año. [peliculas por puntaje](https://api-ml-vk4n.onrender.com/docs#/default/get_score_count_score_count__get)
-
-
-+ **get_count_platform**: Cantidad de películas por plataforma con filtro de plataforma. [peliculas por plataforma](https://api-ml-vk4n.onrender.com/docs#/default/get_count_platform_count_platform__get)
++ **get_score_count**: Cantidad de películas por plataforma con un puntaje mayor a XX en determinado año. [peliculas por puntaje](https://webappapistream.azurewebsites.net/docs#/default/get_score_count_score_count__get)
 
 
-+ **get_actor**: Actor que más se repite según plataforma y año. [actor mas frecuente](https://api-ml-vk4n.onrender.com/docs#/default/get_actor_actor__get)
++ **get_count_platform**: Cantidad de películas por plataforma con filtro de plataforma. [peliculas por plataforma](https://webappapistream.azurewebsites.net/docs#/default/get_count_platform_count_platform__get)
+
+
++ **get_actor**: Actor que más se repite según plataforma y año. [actor mas frecuente](https://webappapistream.azurewebsites.net/docs#/default/get_actor_actor__get)
 
 ## Api Caracteristicas
 

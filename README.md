@@ -5,15 +5,15 @@
 </p>
 
 
-# Autor
+# Autor Diego Maneyro
 
-+ diego-maneyro [linkedin](https://www.linkedin.com/in/diego-maneyro/)
++ [linkedin](https://www.linkedin.com/in/diego-maneyro/)
 
-+ E-mail diegomaneyro@gmail.com
++ [E-mail](diegomaneyro@gmail.com)
 
-
-## ApiStream es un proyecto desarrollado con dos propósitos principales:
-
+# Descripcion del proyecto
+ 
+ApiStream es un proyecto desarrollado con dos propósitos principales:
 1. API de consultas sobre series y películas en plataformas de streaming, utilizando archivos en formato .csv como base de datos. Estos archivos contienen información de servicios como Amazon Prime, Netflix, Disney Plus y Hulu. Mediante un proceso de ETL (extraer, transformar, cargar) realizado en un Jupyter Notebook y una normalización de datos en Python, se ha creado la API utilizando la biblioteca FastAPI.
 
 2. Modelo de recomendación con Machine Learning que recibe el ID de usuarios de estas plataformas y sugiere series o películas en función de las elecciones previas. Además, se proporciona una interfaz gráfica desarrollada con Gradio, desplegada en HugginsFace, para probar la demostración del modelo de recomendación.
@@ -21,21 +21,28 @@
 
 ## Repositorio
 
-**`ETL`** : jupyter notebook del proceso ETL sobre los archivos de streaming.
+**`DATOS/ETL`** : jupyter notebook del proceso ETL sobre los archivos de streaming.
 
-**`EDA`** : jupyter notebook del proceso exploratorio y graficas necesarias para comprender la calidad del dato. 
+**`DATOS/EDA`** : jupyter notebook del proceso exploratorio y graficas necesarias para comprender la calidad del dato. 
 
 **`Recursos`** : archivos multimedia de repositorio.
 
-**`Main`** : Archivo que inicializa la API de consultas
+**`APP/Main`** : Archivo que inicializa la API de consultas
 
 **`Modelo`** : Archivos del modelo de recomendación
 
-## Deploy
-+ Render: [Demo](https://api-ml-vk4n.onrender.com/docs)
+## Docker
 <p align="left">
-<img src="recursos/Render-logo.png"  height=180>
+<img src="recursos/docker.png"  height=180>
 </p>
+ Usando Docker realize una imgen de la aplicacion para luego alojarla en Microsoft Azure, por medio de un registro de contenedores que luego se utiliza desde el Web Services. los datos se leen desde un contenedor en una cuenta de almacenamiento en Microsoft Azure Storage para alimentar a la api. 
+
+## Deploy Api
++ WebAppApiStream: [Demo](webappapistream.azurewebsites.net)
+<p align="left">
+<img src="recursos/nube.png"  height=180>
+</p>
+
 
 ## Ingreso de datos
 
@@ -67,7 +74,7 @@
 
 + **get_actor**: Actor que más se repite según plataforma y año. [actor mas frecuente](https://api-ml-vk4n.onrender.com/docs#/default/get_actor_actor__get)
 
-## Api
+## Api Caracteristicas
 
 ``http
   GET / Autor
@@ -84,7 +91,6 @@
 | Condition | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | **ok** | `string` |  **Conexion Exitosa** |
-| **failure** | `string` |  **No se encontró el archivo de datos** |
 | **error** | `string` |  **Error en la conexion a los datos** |
 
 ``http
@@ -110,7 +116,7 @@
 
 
 ``http
-  GET /get_count_platform(platform))
+  GET /get_count_platform(platform)
 ``
 
 | Parameter | Type     | Description                |
@@ -119,7 +125,7 @@
 
 
 ``http
-  GET /get_actor(platform, year))
+  GET /get_actor(platform, year)
 ``
 
 | Parameter | Type     | Description                |
@@ -127,7 +133,7 @@
 | `Plataforma` | `string` | **platform** |
 | `año` | `Integer` | **year**  |
 
-## Deploy
+## Deploy Modelo Recomendacion
 * Hugginsface: [Modelo](https://huggingface.co/spaces/diegomaneyro/ApiStream)
   
 Se ingresa el IdUsuario y en la salida de datos veremos los titulos de la recomendación

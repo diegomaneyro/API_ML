@@ -6,7 +6,7 @@ from pandasql import sqldf
 app = FastAPI(title='ApiStream', description='Api de consulta para peliculas y series en plataformas de streming. \n By Diego Maneyro', version='1.0.4')
 
 # Leer datos desde un contenedor en cuenta de almacenamiento en Microsoft Azure
-url = "https://apistreamdatos.blob.core.windows.net/apidatos/peliculas_final.csv"
+url = "https://apistream.blob.core.windows.net/datos-apistream/peliculas_final.csv"
 
 # inicio
 @app.get("/")

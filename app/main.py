@@ -6,7 +6,7 @@ from pandasql import sqldf
 app = FastAPI(title='ApiStream', description='Api de consulta para peliculas y series en plataformas de streming. \n By Diego Maneyro', version='1.0.4')
 
 # Leer datos desde 
-url = "datos\csvs\peliculas\peliculas_final.csv"
+url = "datos/csvs/peliculas/peliculas_final.csv"
 
 # inicio
 @app.get("/")

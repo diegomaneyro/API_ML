@@ -1,5 +1,0 @@
-services:
-  - name: my-fastapi-app
-    env: python
-    build_command: pip install -r requirements.txt
-    start_command: uvicorn app.main:app --host 0.0.0.0 --port 8080

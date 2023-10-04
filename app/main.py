@@ -77,7 +77,7 @@ async def get_max_duration(year: int = None, platform: str = None, duration_type
 # Definir la ruta y la función correspondiente para obtener la cantidad de películas por plataforma con un puntaje mayor a XX en determinado año
 @app.get("/score_count/")
 async def get_score_count(platform: str, scored: str, year: int):    
-    datos = pd.read_csv(url)
+    datos = pd.read_csv(url, sep=',', encoding='latin-1') 
     if platform=='netflix':
         platform='n'
     if platform=='amazon':

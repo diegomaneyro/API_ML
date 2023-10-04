@@ -63,23 +63,23 @@ Deploy: [Demo]()
 
 ## Consultas
 
-+ **Inicio**: Pagina de inicio. [inicio de api](https://webappapistream.azurewebsites.net/)
++ **Inicio**: Pagina de inicio. [inicio de api](https://apistream.onrender.com/)
 
-+ **Menu**: Pagina de donde se visualizan las distintas consultas que ofrece la api. [menu opciones](https://webappapistream.azurewebsites.net/docs)
++ **Menu**: Pagina de donde se visualizan las distintas consultas que ofrece la api. [menu opciones](https://apistream.onrender.com/docs)
 
-+ **autor**: Datos del desarrollador resposnsable del proyecto. [datos del autor](https://webappapistream.azurewebsites.net/docs#/default/autor_autor_get)
++ **autor**: Datos del desarrollador resposnsable del proyecto. [datos del autor](https://apistream.onrender.com/docs#/default/autor_autor_get)
 
-+ **verificar conexion**: Ejecute este paso para asegurarse que la api esta accediendo a los datos. [conexion](https://webappapistream.azurewebsites.net/docs#/default/verificar_conexion_verificar_conexion_get)
++ **verificar conexion**: Ejecute este paso para asegurarse que la api esta accediendo a los datos. [conexion](https://apistream.onrender.com/docs#/default/verificar_conexion_verificar_conexion_get)
 
-+ **get_max_duration**: Película con mayor duración con filtros opcionales de año, plataforma y tipo de duración. [pelicula mayor duración](https://webappapistream.azurewebsites.net/docs#/default/get_max_duration_max_duration_get)
++ **get_max_duration**: Película con mayor duración con filtros opcionales de año, plataforma y tipo de duración. [pelicula mayor duración](https://apistream.onrender.com/docs#/default/get_max_duration_max_duration_get)
 
-+ **get_score_count**: Cantidad de películas por plataforma con un puntaje mayor a XX en determinado año. [peliculas por puntaje](https://webappapistream.azurewebsites.net/docs#/default/get_score_count_score_count__get)
-
-
-+ **get_count_platform**: Cantidad de películas por plataforma con filtro de plataforma. [peliculas por plataforma](https://webappapistream.azurewebsites.net/docs#/default/get_count_platform_count_platform__get)
++ **get_score_count**: Cantidad de películas por plataforma con un puntaje mayor a XX en determinado año. [peliculas por puntaje](https://apistream.onrender.com/docs#/default/get_score_count_score_count__get)
 
 
-+ **get_actor**: Actor que más se repite según plataforma y año. [actor mas frecuente](https://webappapistream.azurewebsites.net/docs#/default/get_actor_actor__get)
++ **get_count_platform**: Cantidad de películas por plataforma con filtro de plataforma. [peliculas por plataforma](https://apistream.onrender.com/docs#/default/get_count_platform_count_platform__get)
+
+
++ **get_actor**: Actor que más se repite según plataforma y año. [actor mas frecuente](https://apistream.onrender.com/docs#/default/get_actor_actor__get)
 
 ## Api Caracteristicas
 

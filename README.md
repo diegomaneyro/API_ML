@@ -45,9 +45,12 @@ ApiStream es un proyecto desarrollado con dos propósitos principales:
 
 
 ## Deploy Api
-+ WebAppApiStream: [Demo](webappapistream.azurewebsites.net)
++ Demo: webappapistream.azurewebsites.net
+Por cuestion de costos luego del desarrollo se retiro la app del portal de Azure adjunto captura 
+![Captura](https://github.com/diegomaneyro/ApiStream/assets/68664243/bde7f0be-861b-4e1f-b588-e1c3d4f45696)
 
-
+## Probar api desde Render
+Deploy: [Demo]()
 ## Ingreso de datos
 
 * Las consultas deben ser en minusculas:

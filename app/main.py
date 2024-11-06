@@ -18,13 +18,13 @@ async def Inicio():
 # Mostrar datos del autor de la la API
 @app.get("/autor")
 async def autor():
-    datos = {"Name":"Diego Maneyro",
+    data = {"Name":"Diego Maneyro",
             "Email":"diegomaneyro@gmail.com"}
-    return datos
+    return data
 
 # Verificar conexion
-@app.get("/verificar_conexion")
-async def verificar_conexion():
+@app.get("/verify_connection")
+async def verify_conecion():
     try:
         # Leer los datos del archivo CSV
         datos = pd.read_csv(url, sep=',', encoding='latin-1')
@@ -38,7 +38,7 @@ async def verificar_conexion():
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error en la conexion a los datos: {str(e)}")
 
-# Definir la ruta para la consulta
+# Definir la ruta para la consulta de la maxima duracion
 @app.get("/max_duration")
 async def get_max_duration(year: int = None, platform: str = None, duration_type: str = None):
     # Cargar los datos del archivo CSV en un DataFrame de Pandas           

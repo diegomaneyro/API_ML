@@ -11,46 +11,54 @@
 
 + [E-mail](diegomaneyro@gmail.com)
 
-# Descripcion del proyecto
- 
+# Descripcion 
 ApiStream es un proyecto desarrollado con dos propósitos principales:
-1. API de consultas sobre series y películas en plataformas de streaming, utilizando archivos en formato .csv como base de datos. Estos archivos contienen información de servicios como Amazon Prime, Netflix, Disney Plus y Hulu. Mediante un proceso de ETL (extraer, transformar, cargar) realizado en un Jupyter Notebook y una normalización de datos en Python, se ha creado la API utilizando la biblioteca FastAPI.
 
-2. Modelo de recomendación con Machine Learning que recibe el ID de usuarios de estas plataformas y sugiere series o películas en función de las elecciones previas. Además, se proporciona una interfaz gráfica desarrollada con Gradio, desplegada en HugginsFace, para probar la demostración del modelo de recomendación.
+API RESTful de Consultas sobre Series y Películas en Plataformas de Streaming:
+
+Descripción: ApiStream ofrece una API RESTful que permite realizar consultas sobre series y películas disponibles en plataformas de streaming como Amazon Prime, Netflix, Disney Plus y Hulu.
+
+Base de Datos: Los datos se almacenan en archivos .csv que contienen información detallada sobre los servicios de streaming. Estos archivos han sido procesados mediante un flujo ETL (Extraer, Transformar, Cargar) realizado en un Jupyter Notebook, y los datos se han normalizado utilizando Python.
+
+Tecnología: La API está construida utilizando la biblioteca FastAPI, que facilita la creación de APIs rápidas y de alto rendimiento.
+
+¿Qué es RESTful?:
+
+Descripción: RESTful (Representational State Transfer) es un estilo de arquitectura para diseñar servicios web. Utiliza HTTP para realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) y se basa en recursos, que son entidades accesibles mediante URLs únicas.
+
+Características: Las APIs RESTful son escalables, fáciles de mantener y permiten interacciones con los servicios web de manera uniforme e intuitiva mediante métodos HTTP estándar como GET, POST, PUT y DELETE.
+
+Modelo de Recomendación con Machine Learning:
+
+Descripción: ApiStream incluye un modelo de recomendación basado en Machine Learning, que sugiere series o películas a los usuarios en función de sus elecciones previas.
+
+Input: El modelo recibe el ID de los usuarios de estas plataformas.
+
+Output: Genera recomendaciones personalizadas basadas en el historial de visualización de los usuarios.
+
+Interfaz Gráfica: Además, se proporciona una interfaz gráfica desarrollada con Gradio, desplegada en Hugging Face, para probar y demostrar el modelo de recomendación.
 
 
 ## Repositorio
 
-**`DATOS/ETL`** : jupyter notebook del proceso ETL sobre los archivos de streaming.
-
-**`DATOS/EDA`** : jupyter notebook del proceso exploratorio y graficas necesarias para comprender la calidad del dato. 
-
-**`Recursos`** : archivos multimedia de repositorio.
 
 **`APP/Main`** : Archivo que inicializa la API de consultas
 
+**`ETL`** : jupyter notebook del proceso ETL sobre los archivos de streaming.
+
+**`EDA`** : jupyter notebook del proceso exploratorio y graficas necesarias para comprender la calidad del dato. 
+
+**`Recursos`** : archivos multimedia de repositorio.
+
 **`Modelo`** : Archivos del modelo de recomendación
 
-## Docker
-<p align="left">
-<img src="recursos/docker.png"  height=180>
-</p>
- Usando Docker realize una imgen de la aplicacion para luego alojarla en Microsoft Azure, por medio de un registro de contenedores que luego se utiliza desde el Web Services. los datos se leen desde un contenedor en una cuenta de almacenamiento en Microsoft Azure Storage para alimentar a la api. 
+**`tests`** : Archivos de test
 
 
-## Flujo del Dato
-<p align="left">
-<img src="recursos/flujoDato.png"  height=450>
-</p>
-
-
-## Deploy Api
-+ Demo: webappapistream.azurewebsites.net
-Por cuestion de costos luego del desarrollo se retiro la app del portal de Azure adjunto captura 
-![Captura](https://github.com/diegomaneyro/ApiStream/assets/68664243/bde7f0be-861b-4e1f-b588-e1c3d4f45696)
-
-## Probar api desde Render
+## Deploy Render
 Deploy: [Demo](https://apistream.onrender.com)
+
+
 ## Ingreso de datos
 
 * Las consultas deben ser en minusculas:

@@ -1,4 +1,4 @@
 datos/csvs/ratings/
 app/pruebas.ipynb
-env/
+venv_api_stream/
 __pycache__/

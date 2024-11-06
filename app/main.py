@@ -2,32 +2,41 @@ from fastapi import FastAPI, HTTPException
 import pandas as pd
 from pandasql import sqldf
 
-# Inicializa en el objeto app la libreria
-app = FastAPI(title='ApiStream', description='Api de consulta para peliculas y series en plataformas de streming. \n By Diego Maneyro', version='1.0.4')
+# Inicializa en el objeto app 
+app = FastAPI(title='ApiStream', description='Api de consulta para peliculas y series en plataformas de streming. \n By Diego Maneyro', version='1.0.5')
 
-# Leer datos desde 
-url = "datos/csvs/peliculas/peliculas_final.csv"
+# Leer datos desde csv
+url = "../datos/csvs/peliculas/peliculas_final.csv"
 
-# inicio
+# Inicio - Bienvenida a la Api
 @app.get("/")
 async def Inicio():
-    return {"Inicio":"Api_ml"}
+    return {"message": "Welcome to ApiStream!",
+             "description": "Explore a world of seamless streaming APIs. Check out the documentation and get started!",
+             "docs_url": "/docs"}
 
+# Mostrar datos del autor de la la API
 @app.get("/autor")
 async def autor():
-    datos = {"Nombre y Apellido":"Diego Maneyro",
+    datos = {"Name":"Diego Maneyro",
             "Email":"diegomaneyro@gmail.com"}
     return datos
 
+# Verificar conexion
 @app.get("/verificar_conexion")
 async def verificar_conexion():
     try:
         # Leer los datos del archivo CSV
         datos = pd.read_csv(url, sep=',', encoding='latin-1')
         return {"Message": "Conexión Exitosa"}
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail="No se encontro el archivo")
+    except pd.errors.EmptyDataError:
+        raise HTTPException(status_code=400, detail="Archivo csv vacio")
+    except pd.errors.ParserError:
+        raise HTTPException(status_code=400, detail="Error al analizar el archivo csv")
     except Exception as e:
-        return {"Message": f"Error en la conexión a los datos: {str(e)}"}
-
+        raise HTTPException(status_code=500, detail=f"Error en la conexion a los datos: {str(e)}")
 
 # Definir la ruta para la consulta
 @app.get("/max_duration")

@@ -3,13 +3,13 @@ import pandas as pd
 from pandasql import sqldf
 
 # Inicializa en el objeto app 
-app = FastAPI(title='ApiStream', description='Api de consulta para peliculas y series en plataformas de streming. \n By Diego Maneyro', version='1.0.5')
+app = FastAPI(title='ApiStream',description='Api de consulta para peliculas y series en plataformas de streming. \n By Diego Maneyro', version='1.0.5')
 
 # Leer datos desde csv
-url = "../datos/csvs/peliculas/peliculas_final.csv"
+url = "../data/csvs/peliculas/peliculas_final.csv"
 
 # Inicio - Bienvenida a la Api
-@app.get("/")
+@app.get("/", status_code=200)
 async def Inicio():
     return {"message": "Welcome to ApiStream!",
              "description": "Explore a world of seamless streaming APIs. Check out the documentation and get started!",
@@ -23,8 +23,8 @@ async def autor():
     return data
 
 # Verificar conexion
-@app.get("/verify_connection")
-async def verify_conecion():
+@app.get("/verify_connection", status_code=200)
+async def verify_conection():
     try:
         # Leer los datos del archivo CSV
         datos = pd.read_csv(url, sep=',', encoding='latin-1')
@@ -39,7 +39,7 @@ async def verify_conecion():
         raise HTTPException(status_code=500, detail=f"Error en la conexion a los datos: {str(e)}")
 
 # Definir la ruta para la consulta de la maxima duracion
-@app.get("/max_duration")
+@app.get("/max_duration", status_code=200)
 async def get_max_duration(year: int = None, platform: str = None, duration_type: str = None):
     # Cargar los datos del archivo CSV en un DataFrame de Pandas           
     datos = pd.read_csv(url, sep=',', encoding='latin-1')        
@@ -84,7 +84,7 @@ async def get_max_duration(year: int = None, platform: str = None, duration_type
 
 
 # Definir la ruta y la función correspondiente para obtener la cantidad de películas por plataforma con un puntaje mayor a XX en determinado año
-@app.get("/score_count/")
+@app.get("/score_count/", status_code=200)
 async def get_score_count(platform: str, scored: str, year: int):    
     datos = pd.read_csv(url, sep=',', encoding='latin-1') 
     if platform=='netflix':
@@ -108,7 +108,7 @@ async def get_score_count(platform: str, scored: str, year: int):
     return {"scored": scored, "año": year, "cantidad de peliculas": count}
 
 # Definir la ruta y la función correspondiente para obtener la cantidad de películas por plataforma
-@app.get("/count_platform/")
+@app.get("/count_platform/", status_code=200)
 async def get_count_platform(platform: str):
     datos = pd.read_csv(url, sep=',', encoding='latin-1')     
     if platform=='netflix':
@@ -138,7 +138,7 @@ async def get_count_platform(platform: str):
     return {"plataforma de streaming": platform, "cantidad de peliculas": count}
 
 # Definir la ruta y la función correspondiente para obtener el actor que más se repite según plataforma y año
-@app.get("/actor/")
+@app.get("/actor/", status_code=200)
 async def get_actor(platform: str, year: int):       
     datos = pd.read_csv(url, sep=',', encoding='latin-1')  
     if platform=='netflix':
@@ -165,3 +165,4 @@ async def get_actor(platform: str, year: int):
 
     # Retornar el nombre del actor como un diccionario
     return {'actor': top_actor}
+

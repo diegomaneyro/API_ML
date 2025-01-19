@@ -6,7 +6,7 @@ from pandasql import sqldf
 app = FastAPI(title='ApiStream',description='Api de consulta para peliculas y series en plataformas de streming. \n By Diego Maneyro', version='1.0.5')
 
 # Leer datos desde csv
-url = "../data/csvs/peliculas/peliculas_final.csv"
+url = "./data/peliculas_final.csv"
 
 # Inicio - Bienvenida a la Api
 @app.get("/", status_code=200)
@@ -24,7 +24,7 @@ async def autor():
 
 # Verificar conexion
 @app.get("/verify_connection", status_code=200)
-async def verify_conection():
+async def verify_connection():
     try:
         # Leer los datos del archivo CSV
         datos = pd.read_csv(url, sep=',', encoding='latin-1')
@@ -49,7 +49,7 @@ async def get_max_duration(year: int = None, platform: str = None, duration_type
         FROM datos
         WHERE 1 = 1
     """    
-    # Agregar condiciones opcionales según los parámetros proporcionados
+    
     if year is not None:
         query += f" AND release_year = {year}"
     if platform is not None:
